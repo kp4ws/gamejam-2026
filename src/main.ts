@@ -1,1 +1,26 @@
 import Phaser from "phaser";
+import BootScene from "./scenes/BootScene";
+import MainMenuScene from "./scenes/MainMenuScene";
+import GameScene from "./scenes/GameScene";
+import SoundFX from "./SoundFX";
+
+const config: Phaser.Types.Core.GameConfig = {
+    type: Phaser.AUTO,
+    parent: 'game',
+    width: 480,
+    height: 360,
+    physics: {
+        default: 'arcade',
+        arcade: {
+            gravity: {x: 0, y: 300},
+            debug: true, //TODO: Change back to false
+        },
+    },
+    scene: [BootScene, MainMenuScene, GameScene],
+    scale: {
+        mode: Phaser.Scale.FIT,
+        autoCenter: Phaser.Scale.CENTER_BOTH,
+    },
+};
+
+new Phaser.Game(config);
