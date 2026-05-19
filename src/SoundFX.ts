@@ -2,36 +2,38 @@
     Web audio engine
 */
 
-let ctx: AudioContext | null = null;
+//TODO: uncomment later
 
-function init() {
-    if (!ctx) {
-        ctx = new AudioContext();
-    }
+// let ctx: AudioContext | null = null;
 
-    if(ctx.state === "suspended") {
-        ctx.resume();
-    }
-}
+// function init() {
+//     if (!ctx) {
+//         ctx = new AudioContext();
+//     }
 
-function tone(freq: number, type: OscillatorType, vol: number, duration: number, delay = 0) {
-    init();
-    if(!ctx) {
-        return;
-    }
+//     if(ctx.state === "suspended") {
+//         ctx.resume();
+//     }
+// }
 
-    const oscillator = ctx.createOscillator();
-    const gain = ctx.createGain();
+// function tone(freq: number, type: OscillatorType, _vol: number, duration: number, delay = 0) {
+//     init();
+//     if(!ctx) {
+//         return;
+//     }
 
-    oscillator.connect(gain);
-    gain.connect(ctx.destination);
+//     const oscillator = ctx.createOscillator();
+//     const gain = ctx.createGain();
+
+//     oscillator.connect(gain);
+//     gain.connect(ctx.destination);
     
-    oscillator.type = type;
-    oscillator.frequency.setValueAtTime(freq, ctx.currentTime + delay);
+//     oscillator.type = type;
+//     oscillator.frequency.setValueAtTime(freq, ctx.currentTime + delay);
     
-    oscillator.start(ctx.currentTime + delay);
-    oscillator.stop(ctx.currentTime + delay + duration + 0.05);
-}
+//     oscillator.start(ctx.currentTime + delay);
+//     oscillator.stop(ctx.currentTime + delay + duration + 0.05);
+// }
 
 const SoundFX = {
     //TODO: fill out

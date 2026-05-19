@@ -93,7 +93,7 @@ export default class GameScene extends Phaser.Scene {
     this.energyBar.setScrollFactor(0);
   }
 
-  update(time: number, delta: number) {
+  update(_time: number, delta: number) {
     this.graphics.clear();
 
     this.graphics.fillStyle(0x00ffcc);

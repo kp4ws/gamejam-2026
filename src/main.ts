@@ -2,7 +2,7 @@ import Phaser from "phaser";
 import BootScene from "./scenes/BootScene";
 import MainMenuScene from "./scenes/MainMenuScene";
 import GameScene from "./scenes/GameScene";
-import SoundFX from "./SoundFX";
+// import SoundFX from "./SoundFX";
 
 const config: Phaser.Types.Core.GameConfig = {
     type: Phaser.AUTO,
