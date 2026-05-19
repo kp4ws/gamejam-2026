@@ -12,7 +12,7 @@ const config: Phaser.Types.Core.GameConfig = {
     physics: {
         default: 'arcade',
         arcade: {
-            gravity: {x: 0, y: 300},
+            gravity: {x: 0, y: 0},
             debug: true, //TODO: Change back to false
         },
     },
@@ -20,7 +20,9 @@ const config: Phaser.Types.Core.GameConfig = {
     scale: {
         mode: Phaser.Scale.FIT,
         autoCenter: Phaser.Scale.CENTER_BOTH,
+        zoom: window.devicePixelRatio,
     },
+    // pixelArt: true,
 };
 
 new Phaser.Game(config);
