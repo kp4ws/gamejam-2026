@@ -10,11 +10,13 @@ export default class MainMenuScene extends Phaser.Scene {
 
     //TODO init audio
 
+    this.cameras.main.setBackgroundColor("#1a1a2e");
+
     //Title
     this.add
-      .text(width / 2, height / 2 - 40, "MY GAME", {
+      .text(width / 2, height / 2 - 100, "MY GAME", {
         fontFamily: "monospace",
-        fontSize: "32px",
+        fontSize: "80px",
         color: "#ffffff",
       })
       .setOrigin(0.5);
@@ -23,7 +25,7 @@ export default class MainMenuScene extends Phaser.Scene {
     const startButton = this.add
       .text(width / 2, height / 2 + 20, "START", {
         fontFamily: "monospace",
-        fontSize: "16px",
+        fontSize: "64px",
         color: "#00ffcc",
       })
       .setOrigin(0.5)

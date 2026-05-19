@@ -7,13 +7,13 @@ import SoundFX from "./SoundFX";
 const config: Phaser.Types.Core.GameConfig = {
     type: Phaser.AUTO,
     parent: 'game',
-    width: 480,
-    height: 360,
+    width: 1920,
+    height: 1080,
     physics: {
         default: 'arcade',
         arcade: {
             gravity: {x: 0, y: 0},
-            debug: true, //TODO: Change back to false
+            debug: false,
         },
     },
     scene: [BootScene, MainMenuScene, GameScene],
