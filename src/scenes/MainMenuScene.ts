@@ -14,7 +14,7 @@ export default class MainMenuScene extends Phaser.Scene {
 
     //Title
     this.add
-      .text(width / 2, height / 2 - 100, "MY GAME", {
+      .text(width / 2, height / 2 - 100, "ElectroSphere", {
         fontFamily: "monospace",
         fontSize: "80px",
         color: "#ffffff",
